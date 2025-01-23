@@ -1,3 +1,90 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+  --color-primary: #1c005c;
+  --color-accent-1: #c14eff;
+  --color-accent-2: #ffd700;
+  --color-accent-3: #9966cc;
+  --color-neutral: #eaeaea;
+  --color-secondary: #7a5fcc;
+  --color-text: #1a1a1a;
+  --bevel-large: 32px;
+  --bevel-medium: 24px;
+  --bevel-small: 16px;
+}
+
+@font-face {
+  font-family: 'League Gothic';
+  src: url('$lib/fonts/LeagueGothic-Regular-VariableFont_wdth.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('$lib/fonts/Roboto-VariableFont_wdth,wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('$lib/fonts/Roboto-Light.ttf');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('$lib/fonts/Roboto-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url('$lib/fonts/IBMPlexSerif-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+div,
+span,
+p {
+  letter-spacing: 4%;
+}
+.bevel--large {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--bevel-large)) 0,
+    100% var(--bevel-large),
+    100% 100%,
+    var(--bevel-large) 100%,
+    0 calc(100% - var(--bevel-large))
+  );
+}
+
+.bevel--medium {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--bevel-medium)) 0,
+    100% var(--bevel-medium),
+    100% 100%,
+    var(--bevel-medium) 100%,
+    0 calc(100% - var(--bevel-medium))
+  );
+}
+
+.bevel--small {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--bevel-small)) 0,
+    100% var(--bevel-small),
+    100% 100%,
+    var(--bevel-small) 100%,
+    0 calc(100% - var(--bevel-small))
+  );
+}
