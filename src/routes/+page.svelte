@@ -122,7 +122,7 @@
     background-position: -140px 0;
     background-repeat: no-repeat;
     background-image: linear-gradient(30deg, rgba(255, 255, 255, 0) 0%, var(--color-neutral) 100%),
-      url('$lib/images/main.jpg');
+      url('/images/main.jpg');
   }
 
   @media (min-width: 768px) {
