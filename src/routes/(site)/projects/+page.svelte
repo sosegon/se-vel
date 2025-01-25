@@ -1,7 +1,6 @@
 <script lang="ts">
   import '../../../app.css';
-  import { projects, socialLinks } from '../../../data';
-  import Socials from '../../../components/Socials.svelte';
+  import { projects } from '../../../data';
   import ProjectCard from '../../../components/ProjectCard.svelte';
   import { windowWidth } from '../../../stores/viewport';
   import { BREAKPOINTS } from '../../../constants';
@@ -17,13 +16,6 @@
       size = 'large';
     }
   });
-
-  const socialsStyle = {
-    position: 'fixed',
-    left: 'calc(100vw/9)',
-    bottom: '24px',
-    margin: '0 auto',
-  };
 </script>
 
 <svelte:window bind:innerWidth={$windowWidth} />
@@ -43,9 +35,6 @@
       ></ProjectCard>
     {/each}
   </div>
-  {#if size === 'large'}
-    <Socials links={socialLinks} style={socialsStyle} isElevated></Socials>
-  {/if}
 </div>
 
 <style>

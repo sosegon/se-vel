@@ -11,13 +11,29 @@
   import { socialLinks } from '../../data';
 
   let size: Size = $state('small');
+  let socialsStyle = $state({
+    position: '',
+    bottom: '',
+    margin: '',
+    left: '',
+    right: '',
+  });
+
   windowWidth.subscribe((v) => {
     if (v < BREAKPOINTS[0]) {
       size = 'small';
     } else if (v >= BREAKPOINTS[0] && v < BREAKPOINTS[1]) {
       size = 'medium';
+      socialsStyle = { position: 'fixed', bottom: '24px', margin: '0 auto', left: '0', right: '0' };
     } else if (v >= BREAKPOINTS[1]) {
       size = 'large';
+      socialsStyle = {
+        position: 'fixed',
+        bottom: '24px',
+        margin: '0 auto',
+        left: 'calc(100vw/9)',
+        right: '',
+      };
     }
   });
 
@@ -30,14 +46,6 @@
     'align-items': 'center',
     padding: '0 32px',
     height: '60px',
-  };
-
-  const socialsStyle = {
-    position: 'fixed',
-    right: '0',
-    left: '0',
-    bottom: '24px',
-    margin: '0 auto',
   };
 </script>
 
@@ -56,7 +64,7 @@
         <Navigation {size} {routes} {route} />
       </HorizontalStrip>
     </div>
-  {:else if size === 'medium'}
+  {:else}
     <Socials links={socialLinks} style={socialsStyle} isElevated></Socials>
   {/if}
 </div>
