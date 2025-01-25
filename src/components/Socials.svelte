@@ -7,6 +7,7 @@
   export let links: { github: string; upwork: string; linkedin: string };
   export let isElevated: boolean = false;
   export let style: Record<string, string> = {};
+  export let openInNewTab: boolean = true;
 </script>
 
 <div
@@ -16,13 +17,13 @@
     .map(([key, value]) => `${key}: ${value};`)
     .join(' ')}
 >
-  <a href={links?.upwork}>
+  <a href={links?.upwork} target={openInNewTab ? '_blank' : '_self'}>
     <UpworkIcon />
   </a>
-  <a href={links?.github}>
+  <a href={links?.github} target={openInNewTab ? '_blank' : '_self'}>
     <GithubIcon />
   </a>
-  <a href={links?.linkedin}>
+  <a href={links?.linkedin} target={openInNewTab ? '_blank' : '_self'}>
     <LinkedInIcon />
   </a>
 </div>
