@@ -33,7 +33,7 @@
   };
 
   const socialsStyle = {
-    position: 'absolute',
+    position: 'fixed',
     right: '0',
     left: '0',
     bottom: '24px',
@@ -44,8 +44,10 @@
 <svelte:window bind:innerWidth={$windowWidth} />
 
 <div id="wrapper">
-  <Header {size} {routes} {route}></Header>
-  <div id="content">
+  <div id="header">
+    <Header {size} {routes} {route}></Header>
+  </div>
+  <div>
     <slot></slot>
   </div>
   {#if size === 'small'}
@@ -60,15 +62,17 @@
 </div>
 
 <style>
+  #header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+  }
   #wrapper {
     display: flex;
     flex-direction: column;
   }
-  #content {
-    flex: 1 1 auto;
-  }
   #footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
   }
