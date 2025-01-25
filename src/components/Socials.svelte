@@ -6,9 +6,16 @@
 
   export let links: { github: string; upwork: string; linkedin: string };
   export let isElevated: boolean = false;
+  export let style: Record<string, string> = {};
 </script>
 
-<div class={['socials'].join(' ')} class:elevated={isElevated}>
+<div
+  class={['socials'].join(' ')}
+  class:elevated={isElevated}
+  style={Object.entries(style)
+    .map(([key, value]) => `${key}: ${value};`)
+    .join(' ')}
+>
   <a href={links?.upwork}>
     <UpworkIcon />
   </a>

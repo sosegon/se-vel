@@ -47,7 +47,9 @@
     <ul>
       {#each ROUTES.slice(1) as route, index}
         <li id={`menu-${index}`} style="--index: {index}">
-          {route}
+          <a href={route}>
+            {route}
+          </a>
         </li>
       {/each}
     </ul>

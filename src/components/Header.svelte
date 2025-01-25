@@ -3,8 +3,11 @@
   import HorizontalStrip from './HorizontalStrip.svelte';
   import Navigation from './Navigation/Navigation.svelte';
   import Socials from './Socials.svelte';
+  import { socialLinks } from '../data';
 
   export let size: Size = 'large';
+  export let routes: Array<string> = ['link1', 'link2', 'link3'];
+
   const style = {
     display: 'flex',
     'flex-direction': 'row',
@@ -18,9 +21,9 @@
 <HorizontalStrip {style} {size} position="top">
   <span class={size}>SE-VEL</span>
   {#if size !== 'small'}
-    <Navigation {size} />
+    <Navigation {size} {routes} />
   {:else}
-    <Socials />
+    <Socials links={socialLinks} />
   {/if}
 </HorizontalStrip>
 
