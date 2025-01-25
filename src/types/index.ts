@@ -8,3 +8,7 @@ export type ResumeItem = {
   description?: string;
   dates: string;
 };
+export type Route = {
+  label: string;
+  pathname: string;
+};

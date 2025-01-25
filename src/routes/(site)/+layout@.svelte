@@ -1,15 +1,16 @@
 <script lang="ts">
+  import { page } from '$app/state';
   import '../../app.css';
   import type { Size } from '../../types';
   import Header from '../../components/Header.svelte';
   import { windowWidth } from '../../stores/viewport';
-  import { BREAKPOINTS } from '../../constants';
+  import { BREAKPOINTS, ROUTES as routes } from '../../constants';
   import HorizontalStrip from '../../components/HorizontalStrip.svelte';
   import Navigation from '../../components/Navigation/Navigation.svelte';
   import Socials from '../../components/Socials.svelte';
-  import { routes, socialLinks } from '../../data';
+  import { socialLinks } from '../../data';
 
-  export let size: Size = 'small';
+  let size: Size = $state('small');
   windowWidth.subscribe((v) => {
     if (v < BREAKPOINTS[0]) {
       size = 'small';
@@ -19,6 +20,8 @@
       size = 'large';
     }
   });
+
+  const route = $derived({ label: '', pathname: page.url.pathname });
 
   const footerStyle = {
     display: 'flex',
@@ -41,14 +44,14 @@
 <svelte:window bind:innerWidth={$windowWidth} />
 
 <div id="wrapper">
-  <Header {size} {routes}></Header>
+  <Header {size} {routes} {route}></Header>
   <div id="content">
     <slot></slot>
   </div>
   {#if size === 'small'}
     <div id="footer">
       <HorizontalStrip size="small" position="bottom" style={footerStyle}>
-        <Navigation {size} {routes} />
+        <Navigation {size} {routes} {route} />
       </HorizontalStrip>
     </div>
   {:else if size === 'medium'}
