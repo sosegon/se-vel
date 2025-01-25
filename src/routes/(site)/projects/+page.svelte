@@ -20,7 +20,7 @@
 
 <svelte:window bind:innerWidth={$windowWidth} />
 
-<div id="projects-wrapper">
+<div id="content-wrapper">
   {#if size === 'large'}
     <div class="large-first-column"><div class="page-title">PROJECTS</div></div>
   {/if}
@@ -38,13 +38,6 @@
 </div>
 
 <style>
-  #projects-wrapper {
-    padding: 24px 32px;
-    overflow-y: scroll;
-    margin-top: 80px;
-    margin-bottom: 60px;
-  }
-
   #projects-cards-wrapper {
     display: flex;
     flex-direction: column;
@@ -53,22 +46,17 @@
   }
 
   @media (min-width: 768px) {
-    #projects-wrapper {
-      margin-bottom: 74px;
-    }
     #projects-cards-wrapper {
+      gap: 24px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (min-width: 1440px) {
-    #projects-wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 33.33%);
-    }
     #projects-cards-wrapper {
       grid-column: 2/-1;
+      gap: 32px;
     }
   }
 </style>
