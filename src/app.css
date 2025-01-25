@@ -155,3 +155,25 @@ p {
     opacity: 0.3;
   }
 }
+
+#common-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  #common-cards-wrapper {
+    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  #common-cards-wrapper {
+    grid-column: 2/-1;
+    gap: 32px;
+  }
+}

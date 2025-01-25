@@ -24,7 +24,7 @@
   {#if size === 'large'}
     <div class="large-first-column"><div class="page-title">PROJECTS</div></div>
   {/if}
-  <div id="projects-cards-wrapper">
+  <div id="common-cards-wrapper">
     {#each projects as prj, index}
       <ProjectCard
         {size}
@@ -36,27 +36,3 @@
     {/each}
   </div>
 </div>
-
-<style>
-  #projects-cards-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
-
-  @media (min-width: 768px) {
-    #projects-cards-wrapper {
-      gap: 24px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 1440px) {
-    #projects-cards-wrapper {
-      grid-column: 2/-1;
-      gap: 32px;
-    }
-  }
-</style>
