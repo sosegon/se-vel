@@ -16,6 +16,19 @@
       size = 'large';
     }
   });
+
+  let oddSequence: Array<boolean> = [true, false];
+  const projs = projects.map((prj) => {
+    const first = oddSequence[oddSequence.length - 2];
+    const second = oddSequence[oddSequence.length - 1];
+    let isOdd = false;
+    if (first && second) isOdd = false;
+    else if (first && !second) isOdd = false;
+    else if (!first && second) isOdd = true;
+    else if (!first && !second) isOdd = true;
+    oddSequence.push(isOdd);
+    return { ...prj, isOdd };
+  });
 </script>
 
 <svelte:window bind:innerWidth={$windowWidth} />
@@ -25,10 +38,10 @@
     <div class="large-first-column"><div class="page-title">PROJECTS</div></div>
   {/if}
   <div id="common-cards-wrapper">
-    {#each projects as prj, index}
+    {#each projs as prj, index}
       <ProjectCard
         {size}
-        isOdd={index % 2 !== 0}
+        isOdd={size === 'small' ? index % 2 === 0 : prj.isOdd}
         projectName={prj.name}
         projectType={prj.type}
         imgUrl={prj.imgUrl}
