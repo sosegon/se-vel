@@ -5,9 +5,15 @@
   export let subtitle: string;
   export let isOdd: boolean = true;
   export let size: Size = 'large';
+  export let centerTitle: boolean = false;
 </script>
 
-<div class={['strip', `${size}`].join(' ')} class:strip--odd={isOdd} class:strip--even={!isOdd}>
+<div
+  class={['strip', `${size}`].join(' ')}
+  class:strip--odd={isOdd}
+  class:strip--even={!isOdd}
+  class:strip--center-title={centerTitle}
+>
   <div class="strip-title">
     {title}
   </div>
@@ -22,7 +28,9 @@
     flex-direction: row;
     font-family: 'Roboto', sans-serif;
   }
-
+  .strip--center-title {
+    text-align: center;
+  }
   .strip--odd {
     color: var(--color-primary);
     background-color: var(--color-accent-2);

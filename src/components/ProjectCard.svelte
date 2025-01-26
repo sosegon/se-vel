@@ -10,7 +10,7 @@
   export let imgUrl: string;
 </script>
 
-<div class={['project-card', `project-card--${size}`, `bevel--${size}`]}>
+<div class={['project-card', `project-card--${size}`, `bevel--${size}`].join(' ')}>
   <img src={imgUrl} alt={`${projectName}-${projectType}`} />
   <InfoStripCard title={projectName} subtitle={projectType} {isOdd} {size} />
 </div>

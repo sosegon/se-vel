@@ -12,3 +12,13 @@ export type Route = {
   label: string;
   pathname: string;
 };
+export type Project = {
+  name: string;
+  type: string;
+  technologies: Array<string>;
+  links?: {
+    github?: string;
+    web?: string;
+  };
+  description: string;
+};

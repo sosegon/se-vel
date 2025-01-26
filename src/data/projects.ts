@@ -24,4 +24,19 @@ export default [
     type: 'Computer Vision',
     imgUrl: '/images/projects/wgsn.jpg', // Update this
   },
+  {
+    name: 'Mango grading',
+    type: 'Computer Vision',
+    imgUrl: '/images/projects/wgsn.jpg', // Update this
+  },
+  {
+    name: 'Mango grading',
+    type: 'Computer Vision',
+    imgUrl: '/images/projects/wgsn.jpg', // Update this
+  },
+  {
+    name: 'Mango grading',
+    type: 'Computer Vision',
+    imgUrl: '/images/projects/wgsn.jpg', // Update this
+  },
 ];
