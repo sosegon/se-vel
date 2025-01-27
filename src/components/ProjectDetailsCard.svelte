@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { MouseEventHandler } from 'svelte/elements';
   import type { Project, Size } from '../types';
   import Divider from './Divider.svelte';
   import GithubIcon from './icons/GithubIcon.svelte';
@@ -6,12 +7,20 @@
   import InfoStripCard from './InfoStripCard.svelte';
 
   export let size: Size = 'large';
-  export let data: Project = { name: '', type: '', technologies: [''] };
-  export let onClickClose: () => {} = () => {};
+  export let data: Project = {
+    name: '',
+    type: '',
+    technologies: [''],
+    imgUrl: '',
+    description: '',
+    links: { github: '', web: '' },
+  };
+  export let onClickClose: MouseEventHandler<HTMLButtonElement> = () => {};
+  export let isOdd: boolean = false;
 </script>
 
 <div class={[`project-details-card--${size}`, `bevel--${size}`].join(' ')}>
-  <InfoStripCard {size} title={data.name} subtitle="" centerTitle></InfoStripCard>
+  <InfoStripCard {isOdd} {size} title={data.name} subtitle="" centerTitle></InfoStripCard>
   <div class="project-details">
     <div class="project-metadata">
       <div class="project-technologies">
@@ -20,15 +29,17 @@
         {/each}
       </div>
       <div class="project-links">
-        {#each Object.keys(data.links) as link}
-          <a href={data.links[link]} target="_blank">
-            {#if link === 'github'}
-              <GithubIcon size={size === 'small' ? 16 : 32}></GithubIcon>
-            {/if}
-            {#if link === 'web'}
-              <WebIcon size={size === 'small' ? 16 : 32}></WebIcon>
-            {/if}
-          </a>
+        {#each Object.keys(data.links || {}) as link}
+          {#if link === 'github'}
+            <a href={data?.links?.github} target="_blank">
+              <GithubIcon size={size === 'small' ? 16 : 24}></GithubIcon>
+            </a>
+          {/if}
+          {#if link === 'web'}
+            <a href={data?.links?.web} target="_blank">
+              <WebIcon size={size === 'small' ? 16 : 24}></WebIcon>
+            </a>
+          {/if}
         {/each}
       </div>
     </div>
@@ -42,7 +53,7 @@
       <Divider></Divider>
     </div>
     <div class="project-close">
-      <span onclick={onClickClose}>Close</span>
+      <button on:click={onClickClose}>Close</button>
     </div>
   </div>
 </div>
@@ -78,15 +89,17 @@
     text-align: end;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
-    text-decoration: underline;
-    span {
+    button {
+      text-decoration: underline;
+      color: var(--color-text);
+      opacity: 0.7;
       cursor: pointer;
     }
   }
   .project-details-card--small {
     .project-details {
       padding: 16px;
-      gap: 16px;
+      gap: 8px;
     }
     .project-metadata,
     .project-description,
@@ -97,7 +110,7 @@
   .project-details-card--medium {
     .project-details {
       padding: 24px;
-      gap: 24px;
+      gap: 16px;
     }
     .project-metadata,
     .project-description,
@@ -108,7 +121,7 @@
   .project-details-card--large {
     .project-details {
       padding: 24px 32px;
-      gap: 24px;
+      gap: 16px;
     }
     .project-metadata,
     .project-description,

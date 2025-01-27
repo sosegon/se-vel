@@ -19,6 +19,7 @@
     data: {
       name: 'Project',
       type: 'Web',
+      imgUrl: 'https://google.com',
       technologies: ['tech-1', 'tech-2', 'tech-3'],
       links: {
         github: 'http://google.com',
