@@ -15,6 +15,7 @@ export type Route = {
 export type Project = {
   name: string;
   type: string;
+  imgUrl: string;
   technologies: Array<string>;
   links?: {
     github?: string;

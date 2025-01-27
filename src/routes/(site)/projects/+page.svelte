@@ -2,9 +2,11 @@
   import '../../../app.css';
   import { projects } from '../../../data';
   import ProjectCard from '../../../components/ProjectCard.svelte';
+  import Modal from '../../../components/Modal.svelte';
   import { windowWidth } from '../../../stores/viewport';
   import { BREAKPOINTS } from '../../../constants';
-  import type { Size } from '../../../types';
+  import type { Project, Size } from '../../../types';
+  import ProjectDetailsCard from '../../../components/ProjectDetailsCard.svelte';
 
   let size: Size = $state('small');
   windowWidth.subscribe((v) => {
@@ -29,6 +31,10 @@
     oddSequence.push(isOdd);
     return { ...prj, isOdd };
   });
+
+  let isModalOpen: boolean = $state(false);
+  let selectedProject: Project | undefined = $state(undefined);
+  let isSelectedProjectOdd: boolean = $state(false);
 </script>
 
 <svelte:window bind:innerWidth={$windowWidth} />
@@ -45,7 +51,30 @@
         projectName={prj.name}
         projectType={prj.type}
         imgUrl={prj.imgUrl}
+        onClick={() => {
+          isModalOpen = true;
+          selectedProject = prj;
+          isSelectedProjectOdd = size === 'small' ? index % 2 === 0 : prj.isOdd;
+        }}
       ></ProjectCard>
     {/each}
   </div>
 </div>
+
+<Modal
+  isOpen={isModalOpen}
+  onClose={() => {
+    isModalOpen = false;
+  }}
+>
+  {#if selectedProject}
+    <ProjectDetailsCard
+      {size}
+      onClickClose={() => {
+        isModalOpen = false;
+      }}
+      isOdd={isSelectedProjectOdd}
+      data={selectedProject}
+    ></ProjectDetailsCard>
+  {/if}
+</Modal>
