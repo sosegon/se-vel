@@ -30,6 +30,9 @@
   }
   .strip--center-title {
     text-align: center;
+    .strip-title {
+      padding-left: 0 !important;
+    }
   }
   .strip--odd {
     color: var(--color-primary);
