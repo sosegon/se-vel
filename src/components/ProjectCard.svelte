@@ -1,6 +1,7 @@
 <script lang="ts">
-  import type { Size } from '../types';
+  import type { MouseEventHandler } from 'svelte/elements';
   import './projectCard.css';
+  import type { Size } from '../types';
   import InfoStripCard from './InfoStripCard.svelte';
 
   export let size: Size = 'large';
@@ -8,9 +9,15 @@
   export let projectName: string;
   export let projectType: string;
   export let imgUrl: string;
+  export let onClick: MouseEventHandler<HTMLDivElement> = () => {};
 </script>
 
-<div class={['project-card', `project-card--${size}`, `bevel--${size}`].join(' ')}>
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div
+  on:click={onClick}
+  on:keypress={() => {}}
+  class={['project-card', `project-card--${size}`, `bevel--${size}`].join(' ')}
+>
   <img src={imgUrl} alt={`${projectName}-${projectType}`} />
   <InfoStripCard title={projectName} subtitle={projectType} {isOdd} {size} />
 </div>
