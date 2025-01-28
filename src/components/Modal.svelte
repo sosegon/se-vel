@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fade, scale } from 'svelte/transition';
   import type { MouseEventHandler } from 'svelte/elements';
 
   export let isOpen: boolean = false;
@@ -7,8 +8,12 @@
 
 {#if isOpen}
   <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class="modal-backdrop" on:click={onClose} on:keypress={() => {}}>
-    <div on:click|stopPropagation on:keypress={() => {}}>
+  <div class="modal-backdrop" on:click={onClose} on:keypress={() => {}} transition:fade>
+    <div
+      on:click|stopPropagation
+      on:keypress={() => {}}
+      transition:scale={{ duration: 300, start: 0.1 }}
+    >
       <slot></slot>
     </div>
   </div>
