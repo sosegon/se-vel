@@ -68,13 +68,26 @@
   }}
 >
   {#if selectedProject}
-    <ProjectDetailsCard
-      {size}
-      onClickClose={() => {
-        isModalOpen = false;
-      }}
-      isOdd={isSelectedProjectOdd}
-      data={selectedProject}
-    ></ProjectDetailsCard>
+    <div id="details-wrapper">
+      <ProjectDetailsCard
+        {size}
+        onClickClose={() => {
+          isModalOpen = false;
+        }}
+        isOdd={isSelectedProjectOdd}
+        data={selectedProject}
+      ></ProjectDetailsCard>
+    </div>
   {/if}
 </Modal>
+
+<style>
+  #details-wrapper {
+    padding: 0 32px;
+  }
+  @media (min-width: 768px) {
+    #details-wrapper {
+      width: 768px;
+    }
+  }
+</style>
