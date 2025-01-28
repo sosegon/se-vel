@@ -7,7 +7,7 @@
   export let selected: boolean = false;
 </script>
 
-<a class={size} class:selected href={url}>
+<a class={size} class:selected href={url} transition:fade>
   <div>
     {label}
   </div>
@@ -28,11 +28,19 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     border: solid 1px var(--color-accent-2);
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
     &:hover {
       background-color: var(--color-primary);
       color: var(--color-accent-2);
       border-color: var(--color-primary);
       cursor: pointer;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
     }
     & > div {
       transform: skewX(12deg);

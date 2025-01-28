@@ -23,7 +23,4 @@
 </div>
 
 <style>
-  img {
-    object-position: 0 0;
-  }
 </style>

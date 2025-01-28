@@ -69,7 +69,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    opacity: 0.7;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     color: var(--color-primary);
@@ -80,6 +79,19 @@
     flex-direction: row;
     gap: 32px;
     text-transform: capitalize;
+  }
+  .project-technologies {
+    opacity: 0.7;
+  }
+  .project-links {
+    a {
+      opacity: 0.7;
+      transition: opacity ease 0.3s;
+      &:hover {
+        opacity: 1;
+        transform: opacity ease 0.3s;
+      }
+    }
   }
   .project-description {
     font-family: 'IBM Plex Serif';
@@ -94,6 +106,11 @@
       color: var(--color-text);
       opacity: 0.7;
       cursor: pointer;
+      transform: opacity ease 2.3s;
+      &:hover {
+        opacity: 1;
+        transform: opacity ease 2.3s;
+      }
     }
   }
   .project-details-card--small {
