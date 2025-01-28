@@ -14,6 +14,7 @@
     text-align: end;
     color: var(--color-primary);
     font-family: 'Roboto', sans-serif;
+    opacity: 0.7;
   }
 
   .large {

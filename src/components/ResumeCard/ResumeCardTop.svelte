@@ -19,6 +19,10 @@
     color: var(--color-primary);
     font-family: 'Roboto', sans-serif;
   }
+  .organization,
+  .location {
+    opacity: 0.7;
+  }
   .large {
     .role {
       font-size: 40px;
