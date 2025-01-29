@@ -38,7 +38,7 @@
     out:fade={{ duration: 200 }}
   >
     <div class="portrait">
-      <Portrait url="/images/main.jpg"></Portrait>
+      <Portrait url="/images/main.jpg" {size}></Portrait>
     </div>
     <div class="about-area">
       <TextArea {size} text={about}></TextArea>
