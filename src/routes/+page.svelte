@@ -93,6 +93,12 @@
       font-size: 40px;
       font-family: 'Roboto';
       font-weight: 500;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
   #profile {
