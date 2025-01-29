@@ -24,7 +24,7 @@
 </script>
 
 <HorizontalStrip {style} {size} position="top">
-  <span class={size}>SE-VEL</span>
+  <a href="/" style="user-select: none;"><span class={size}>SE-VEL</span></a>
   {#if size !== 'small'}
     <Navigation {size} {routes} {route} />
   {:else}
