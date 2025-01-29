@@ -153,6 +153,8 @@ p {
     font-size: 256px;
     word-wrap: break-word;
     opacity: 0.3;
+    cursor: default;
+    user-select: none;
   }
 }
 
