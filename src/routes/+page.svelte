@@ -25,9 +25,9 @@
   });
 
   let linePositions: Array<any> = []; // Will hold the `x` positions for each <li>
+  let listItems: Array<any> = []; // Bound to the dom li element
   const calculateLinePositions = () => {
-    const listItems = document.querySelectorAll('#menu li');
-    linePositions = Array.from(listItems).map((item) => {
+    linePositions = listItems.map((item) => {
       const { x, y, height } = item.getBoundingClientRect();
       return { x, y, h: height };
     });
@@ -53,9 +53,13 @@
       <NameTitle name={NAME[size]} {size} />
     </div>
     <div id="menu">
-      <ul in:fly={{ duration: 300, x: -100 }} out:fade={{ duration: 200 }}>
+      <ul
+        on:introend={calculateLinePositions}
+        in:fly={{ duration: 300, x: -100 }}
+        out:fade={{ duration: 200 }}
+      >
         {#each ROUTES.slice(1) as route, index}
-          <li id={`menu-${index}`} style="--index: {index}">
+          <li bind:this={listItems[index]} id={`menu-${index}`} style="--index: {index}">
             <a href={route.pathname}>
               {route.label}
             </a>
