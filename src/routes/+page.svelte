@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import { writable } from 'svelte/store';
   import { fade, fly } from 'svelte/transition';
   import type { Size } from '../types';
@@ -26,11 +26,14 @@
 
   let linePositions: Array<any> = []; // Will hold the `x` positions for each <li>
   let listItems: Array<any> = []; // Bound to the dom li element
-  const calculateLinePositions = () => {
-    linePositions = listItems.map((item) => {
-      const { x, y, height } = item.getBoundingClientRect();
-      return { x, y, h: height };
-    });
+  const calculateLinePositions = async () => {
+    await tick();
+    setTimeout(() => {
+      linePositions = listItems.map((item) => {
+        const { x, y, height } = item.getBoundingClientRect();
+        return { x, y, h: height };
+      });
+    }, 50);
   };
 
   onMount(() => {
@@ -83,7 +86,7 @@
           <div
             class="diagonal-line"
             style="top: {pos.y + pos.h / 2}px; left: calc({pos.x}px - 32px); height: 200vh"
-            in:fly={{ duration: 300, x: -1000 }}
+            in:fly={{ duration: 300, y: 1000 }}
             out:fade={{ duration: 200 }}
           ></div>
         {/each}
