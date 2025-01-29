@@ -3,8 +3,8 @@
   import { writable } from 'svelte/store';
   import { fade, fly } from 'svelte/transition';
   import type { Size } from '../types';
-  import { BREAKPOINTS, NAME, ROUTES } from '../constants';
-  import NameTitle from '../components/NameTitle.svelte';
+  import { BREAKPOINTS, NAME, ROUTES } from '@constants';
+  import NameTitle from '@components/NameTitle.svelte';
 
   // Renders with the right style after loading is done
   export const windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);

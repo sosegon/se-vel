@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Size } from '../types';
+  import type { Size } from '@types';
 
   export let size: Size = 'large';
   export let url: string;

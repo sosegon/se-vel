@@ -1,5 +1,5 @@
 <script module>
-  import '../app.css';
+  import '@root/app.css';
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import Divider from './Divider.svelte';
 

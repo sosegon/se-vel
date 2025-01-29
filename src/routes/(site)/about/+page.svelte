@@ -1,12 +1,12 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
   import { fly, fade } from 'svelte/transition';
-  import '../../../app.css';
-  import { about } from '../../../data';
-  import { BREAKPOINTS } from '../../../constants';
-  import type { Size } from '../../../types';
-  import TextArea from '../../../components/TextArea.svelte';
-  import Portrait from '../../../components/Portrait.svelte';
+  import '@root/app.css';
+  import { about } from '@data';
+  import { BREAKPOINTS } from '@constants';
+  import type { Size } from '@types';
+  import TextArea from '@components/TextArea.svelte';
+  import Portrait from '@components/Portrait.svelte';
 
   export const windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
   let size: Size = $state('small');

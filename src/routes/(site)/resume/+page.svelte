@@ -1,11 +1,11 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
   import { fly, fade } from 'svelte/transition';
-  import '../../../app.css';
-  import { resume } from '../../../data';
-  import ResumeCard from '../../../components/ResumeCard/ResumeCard.svelte';
-  import { BREAKPOINTS } from '../../../constants';
-  import type { Size } from '../../../types';
+  import '@root/app.css';
+  import { resume } from '@data';
+  import ResumeCard from '@components/ResumeCard/ResumeCard.svelte';
+  import { BREAKPOINTS } from '@constants';
+  import type { Size } from '@types';
 
   export const windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
   let size: Size = $state('small');

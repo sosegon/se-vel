@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Size } from '../../types';
+  import type { Size } from '@types';
 
   export let role: string;
   export let organization: string;

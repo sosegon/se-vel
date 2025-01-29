@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ResumeItem, Size } from '../../types';
+  import type { ResumeItem, Size } from '@types';
   import ResumeCardBottom from './ResumeCardBottom.svelte';
   import ResumeCardTop from './ResumeCardTop.svelte';
   import Divider from '../Divider.svelte';

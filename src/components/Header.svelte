@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Size, Route } from '../types';
+  import type { Size, Route } from '@types';
   import HorizontalStrip from './HorizontalStrip.svelte';
   import Navigation from './Navigation/Navigation.svelte';
   import Socials from './Socials.svelte';
-  import { socialLinks } from '../data';
+  import { socialLinks } from '@data';
 
   export let size: Size = 'large';
   export let routes: Array<Route> = [

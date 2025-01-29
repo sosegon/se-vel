@@ -3,14 +3,14 @@
   import { page } from '$app/state';
   import { fly } from 'svelte/transition';
   import { writable } from 'svelte/store';
-  import '../../app.css';
-  import type { Size } from '../../types';
-  import Header from '../../components/Header.svelte';
-  import { BREAKPOINTS, ROUTES as routes } from '../../constants';
-  import HorizontalStrip from '../../components/HorizontalStrip.svelte';
-  import Navigation from '../../components/Navigation/Navigation.svelte';
-  import Socials from '../../components/Socials.svelte';
-  import { socialLinks } from '../../data';
+  import '@root/app.css';
+  import type { Size } from '@types';
+  import Header from '@components/Header.svelte';
+  import { BREAKPOINTS, ROUTES as routes } from '@constants';
+  import HorizontalStrip from '@components/HorizontalStrip.svelte';
+  import Navigation from '@components/Navigation/Navigation.svelte';
+  import Socials from '@components/Socials.svelte';
+  import { socialLinks } from '@data';
 
   // Renders with the right style after loading is done
   export const windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);

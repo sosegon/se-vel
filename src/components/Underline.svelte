@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Thickness } from '../types';
+  import type { Thickness } from '@types';
 
   export let thickness: Thickness = 'thick';
 </script>

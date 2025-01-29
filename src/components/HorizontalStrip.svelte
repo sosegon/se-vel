@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Size, Position } from '../types';
+  import type { Size, Position } from '@types';
 
   export let size: Size = 'large'; // 'small', 'medium', or 'large'
   export let position: Position = 'top'; // 'top' or 'bottom'

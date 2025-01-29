@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Size, Route } from '../../types';
+  import type { Size, Route } from '@types';
   import NavItem from './NavItem.svelte';
 
   export let size: Size = 'large';

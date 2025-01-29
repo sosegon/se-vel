@@ -1,11 +1,11 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
   import { fly, fade } from 'svelte/transition';
-  import '../../../app.css';
-  import { blog } from '../../../data';
-  import ProjectCard from '../../../components/ProjectCard.svelte';
-  import { BREAKPOINTS } from '../../../constants';
-  import type { Size } from '../../../types';
+  import '@root/app.css';
+  import { blog } from '@data';
+  import ProjectCard from '@components/ProjectCard.svelte';
+  import { BREAKPOINTS } from '@constants';
+  import type { Size } from '@types';
 
   export const windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
   let size: Size = $state('small');

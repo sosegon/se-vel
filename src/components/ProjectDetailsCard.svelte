@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { MouseEventHandler } from 'svelte/elements';
-  import type { Project, Size } from '../types';
+  import type { Project, Size } from '@types';
   import Divider from './Divider.svelte';
   import GithubIcon from './icons/GithubIcon.svelte';
   import WebIcon from './icons/WebIcon.svelte';
