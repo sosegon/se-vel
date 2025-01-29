@@ -45,9 +45,9 @@
   }
 
   .large {
-    height: 96px;
+    height: 80px;
     .strip-title {
-      font-size: 40px;
+      font-size: 32px;
       padding: 0 0 0 32px;
     }
     .strip-subtitle {
