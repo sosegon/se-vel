@@ -62,6 +62,9 @@
     font-weight: 500;
     font-size: 32px;
   }
+  .cards-title:nth-child(n + 2) {
+    margin-top: 16px;
+  }
   @media (min-width: 768px) {
     #resume-cards-wrapper {
       gap: 24px;
@@ -69,6 +72,9 @@
     .cards-title {
       line-height: 24px;
       font-size: 40px;
+    }
+    .cards-title:nth-child(n + 2) {
+      margin-top: 24px;
     }
   }
 
@@ -80,6 +86,9 @@
     .cards-title {
       line-height: 32px;
       font-size: 48px;
+    }
+    .cards-title:nth-child(n + 2) {
+      margin-top: 40px;
     }
   }
 </style>
