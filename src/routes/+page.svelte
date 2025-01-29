@@ -116,6 +116,11 @@
       font-size: 40px;
       font-family: 'Roboto';
       font-weight: 500;
+      transition: transform ease 0.3s;
+      &:hover {
+        transform: translateX(5px);
+        transition: transform ease 0.3s;
+      }
       a {
         text-decoration: none;
         &:hover {
