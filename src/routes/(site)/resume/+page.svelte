@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fly, fade } from 'svelte/transition';
   import '../../../app.css';
   import { resume } from '../../../data';
   import ResumeCard from '../../../components/ResumeCard/ResumeCard.svelte';
@@ -24,7 +25,16 @@
   {#if size === 'large'}
     <div class="large-first-column"><div class="page-title">RESUME</div></div>
   {/if}
-  <div id="resume-cards-wrapper">
+  <div
+    id="resume-cards-wrapper"
+    in:fly={{
+      easing: (x) => x ** 0.5,
+      delay: 200,
+      duration: 300,
+      ...(size === 'small' ? { y: 200 } : { x: 200 }),
+    }}
+    out:fade={{ duration: 200 }}
+  >
     <div class="cards-title">WORK</div>
     {#each resume.work as resumeItem}
       <ResumeCard {size} {resumeItem}></ResumeCard>

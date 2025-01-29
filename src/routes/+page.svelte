@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { fade, fly } from 'svelte/transition';
   import type { Size } from '../types';
   import { BREAKPOINTS, NAME, ROUTES } from '../constants';
   import { windowWidth } from '../stores/viewport';
@@ -40,10 +41,10 @@
 <svelte:window bind:innerWidth={$windowWidth} />
 
 <div id="wrapper">
-  <div id="title">
+  <div id="title" in:fly={{ duration: 300, x: -100 }} out:fade={{ duration: 200 }}>
     <NameTitle name={NAME[size]} {size} />
   </div>
-  <div id="menu">
+  <div id="menu" in:fly={{ duration: 300, x: -100 }} out:fade={{ duration: 200 }}>
     <ul>
       {#each ROUTES.slice(1) as route, index}
         <li id={`menu-${index}`} style="--index: {index}">
@@ -54,18 +55,24 @@
       {/each}
     </ul>
   </div>
-  <div id="profile"><span>Creative Technologist</span></div>
-  <div id="background"></div>
+  <div id="profile" in:fly={{ duration: 300, x: 100 }} out:fade={{ duration: 200 }}>
+    <span>Creative Technologist</span>
+  </div>
+  <div id="background" in:fade></div>
   {#if size !== 'small'}
     <div id="lines-container">
       {#each linePositions as pos}
         <div
           class="horizontal-line"
           style="top: {pos.y + pos.h / 2}px; width: calc({pos.x}px - 32px);"
+          in:fly={{ duration: 300, x: -1000 }}
+          out:fade={{ duration: 200 }}
         ></div>
         <div
           class="diagonal-line"
           style="top: {pos.y + pos.h / 2}px; left: calc({pos.x}px - 32px); height: 200vh"
+          in:fly={{ duration: 300, x: -1000 }}
+          out:fade={{ duration: 200 }}
         ></div>
       {/each}
     </div>

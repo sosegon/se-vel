@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fly, fade } from 'svelte/transition';
   import '../../../app.css';
   import { projects } from '../../../data';
   import ProjectCard from '../../../components/ProjectCard.svelte';
@@ -39,11 +40,22 @@
 
 <svelte:window bind:innerWidth={$windowWidth} />
 
-<div id="content-wrapper">
+<div id="content-wrapper" class="page-title">
   {#if size === 'large'}
-    <div class="large-first-column"><div class="page-title">PROJECTS</div></div>
+    <div class="large-first-column">
+      <div class="page-title">PROJECTS</div>
+    </div>
   {/if}
-  <div id="common-cards-wrapper">
+  <div
+    id="common-cards-wrapper"
+    in:fly={{
+      easing: (x) => x ** 0.5,
+      delay: 200,
+      duration: 300,
+      ...(size === 'small' ? { y: 200 } : { x: 200 }),
+    }}
+    out:fade={{ duration: 200 }}
+  >
     {#each projs as prj, index}
       <ProjectCard
         {size}
