@@ -1,12 +1,13 @@
 <script lang="ts">
+  import { writable } from 'svelte/store';
   import { fly, fade } from 'svelte/transition';
   import '../../../app.css';
   import { resume } from '../../../data';
   import ResumeCard from '../../../components/ResumeCard/ResumeCard.svelte';
-  import { windowWidth } from '../../../stores/viewport';
   import { BREAKPOINTS } from '../../../constants';
   import type { Size } from '../../../types';
 
+  export const windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
   let size: Size = $state('small');
   windowWidth.subscribe((v) => {
     if (v < BREAKPOINTS[0]) {

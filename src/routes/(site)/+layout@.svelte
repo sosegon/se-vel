@@ -1,14 +1,22 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { page } from '$app/state';
+  import { writable } from 'svelte/store';
   import '../../app.css';
   import type { Size } from '../../types';
   import Header from '../../components/Header.svelte';
-  import { windowWidth } from '../../stores/viewport';
   import { BREAKPOINTS, ROUTES as routes } from '../../constants';
   import HorizontalStrip from '../../components/HorizontalStrip.svelte';
   import Navigation from '../../components/Navigation/Navigation.svelte';
   import Socials from '../../components/Socials.svelte';
   import { socialLinks } from '../../data';
+
+  // Renders with the right style after loading is done
+  export const windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
+  let loading = $state(true);
+  onMount(() => {
+    loading = false;
+  });
 
   let size: Size = $state('small');
   let socialsStyle = $state({
@@ -51,23 +59,27 @@
 
 <svelte:window bind:innerWidth={$windowWidth} />
 
-<div id="wrapper">
-  <div id="header">
-    <Header {size} {routes} {route}></Header>
-  </div>
-  <div>
-    <slot></slot>
-  </div>
-  {#if size === 'small'}
-    <div id="footer">
-      <HorizontalStrip size="small" position="bottom" style={footerStyle}>
-        <Navigation {size} {routes} {route} />
-      </HorizontalStrip>
+{#if loading === true}
+  <div></div>
+{:else}
+  <div id="wrapper">
+    <div id="header">
+      <Header {size} {routes} {route}></Header>
     </div>
-  {:else}
-    <Socials links={socialLinks} style={socialsStyle} isElevated></Socials>
-  {/if}
-</div>
+    <div>
+      <slot></slot>
+    </div>
+    {#if size === 'small'}
+      <div id="footer">
+        <HorizontalStrip size="small" position="bottom" style={footerStyle}>
+          <Navigation {size} {routes} {route} />
+        </HorizontalStrip>
+      </div>
+    {:else}
+      <Socials links={socialLinks} style={socialsStyle} isElevated></Socials>
+    {/if}
+  </div>
+{/if}
 
 <style>
   #header {
