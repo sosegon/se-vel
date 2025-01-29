@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { page } from '$app/state';
+  import { fly } from 'svelte/transition';
   import { writable } from 'svelte/store';
   import '../../app.css';
   import type { Size } from '../../types';
@@ -63,7 +64,7 @@
   <div></div>
 {:else}
   <div id="wrapper">
-    <div id="header">
+    <div id="header" in:fly={{ delay: 200, duration: 300, y: -200 }}>
       <Header {size} {routes} {route}></Header>
     </div>
     <div>
@@ -71,12 +72,12 @@
     </div>
     {#if size === 'small'}
       <div id="footer">
-        <HorizontalStrip size="small" position="bottom" style={footerStyle}>
+        <HorizontalStrip style={footerStyle} size="small" position="bottom">
           <Navigation {size} {routes} {route} />
         </HorizontalStrip>
       </div>
     {:else}
-      <Socials links={socialLinks} style={socialsStyle} isElevated></Socials>
+      <Socials style={socialsStyle} links={socialLinks} isElevated></Socials>
     {/if}
   </div>
 {/if}
