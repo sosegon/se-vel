@@ -10,9 +10,9 @@
   --color-neutral: #eaeaea;
   --color-secondary: #7a5fcc;
   --color-text: #1a1a1a;
-  --bevel-large: 32px;
-  --bevel-medium: 24px;
-  --bevel-small: 16px;
+  --bevel-large: 40px;
+  --bevel-medium: 32px;
+  --bevel-small: 24px;
 }
 
 @font-face {
@@ -85,36 +85,15 @@ p {
   line-height: auto;
 }
 .bevel--large {
-  clip-path: polygon(
-    0 0,
-    calc(100% - var(--bevel-large)) 0,
-    100% var(--bevel-large),
-    100% 100%,
-    var(--bevel-large) 100%,
-    0 calc(100% - var(--bevel-large))
-  );
+  clip-path: xywh(0 0 100% 100% round 4px var(--bevel-large));
 }
 
 .bevel--medium {
-  clip-path: polygon(
-    0 0,
-    calc(100% - var(--bevel-medium)) 0,
-    100% var(--bevel-medium),
-    100% 100%,
-    var(--bevel-medium) 100%,
-    0 calc(100% - var(--bevel-medium))
-  );
+  clip-path: xywh(0 0 100% 100% round 4px var(--bevel-medium));
 }
 
 .bevel--small {
-  clip-path: polygon(
-    0 0,
-    calc(100% - var(--bevel-small)) 0,
-    100% var(--bevel-small),
-    100% 100%,
-    var(--bevel-small) 100%,
-    0 calc(100% - var(--bevel-small))
-  );
+  clip-path: xywh(0 0 100% 100% round 4px var(--bevel-small));
 }
 
 #content-wrapper {

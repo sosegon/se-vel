@@ -27,24 +27,25 @@
     line-height: auto;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    border: solid 1px var(--color-accent-2);
+    clip-path: xywh(0 0 100% 100% round 15px 15px);
     transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease,
+      transform 0.3s ease,
       color 0.3s ease;
     &:hover {
-      background-color: var(--color-primary);
-      color: var(--color-accent-2);
-      border-color: var(--color-primary);
       cursor: pointer;
+      transform: skewX(0deg);
       transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease,
+        transform 0.3s ease,
         color 0.3s ease;
+      & > div {
+        transform: skewX(0deg);
+        transition: transform 0.3s ease;
+      }
     }
     & > div {
       transform: skewX(12deg);
       text-transform: capitalize;
+      transition: transform 0.3s ease;
     }
   }
 
@@ -65,13 +66,17 @@
   }
 
   .selected {
-    border-color: var(--color-primary);
     cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-accent-2);
     &:hover {
-      background-color: var(--color-accent-2);
-      color: var(--color-primary);
-      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+      color: var(--color-accent-2);
       cursor: default;
+      transform: skewX(-12deg);
+      & > div {
+        transform: skewX(12deg);
+      }
     }
   }
 </style>
