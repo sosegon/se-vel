@@ -30,6 +30,6 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: rgba(122, 95, 204, 0.7); /* secondary color */
+    background-color: var(--color-secondary-75);
   }
 </style>

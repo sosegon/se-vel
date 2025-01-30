@@ -3,12 +3,13 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --color-primary: #1c005c;
+  --color-primary: #090979;
   --color-accent-1: #c14eff;
   --color-accent-2: #ffd700;
   --color-accent-3: #9966cc;
   --color-neutral: #eaeaea;
   --color-secondary: #7a5fcc;
+  --color-secondary-75: rgba(122, 95, 204, 0.75);
   --color-text: #1a1a1a;
   --bevel-large: 40px;
   --bevel-medium: 32px;
