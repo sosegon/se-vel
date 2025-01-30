@@ -9,7 +9,7 @@
   export let isOdd: boolean = true;
 </script>
 
-<div class={[`resume-card--${size}`, `bevel--${size}${isOdd ? '-odd' : ''}`].join(' ')}>
+<div class={[`resume-card--${size}`, `bevel--${size}`].join(' ')}>
   <InfoStripCard {isOdd} {size} title={role} subtitle=""></InfoStripCard>
   <div class="resume-details">
     <div class="resume-metadata">
