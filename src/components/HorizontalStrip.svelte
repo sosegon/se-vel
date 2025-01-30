@@ -29,9 +29,9 @@
     height: 100px;
   }
   .top {
-    border-bottom: solid 1px var(--color-primary);
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.25);
   }
   .bottom {
-    border-top: solid 1px var(--color-primary);
+    box-shadow: 0px -2px 4px rgb(0, 0, 0, 0.25);
   }
 </style>
