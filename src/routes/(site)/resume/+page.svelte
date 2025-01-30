@@ -37,12 +37,12 @@
     out:fade={{ duration: 200 }}
   >
     <div class="cards-title">WORK</div>
-    {#each resume.work as resumeItem}
-      <ResumeCard {size} {resumeItem}></ResumeCard>
+    {#each resume.work as resumeItem, index}
+      <ResumeCard {size} {resumeItem} isOdd={index % 2 !== 0}></ResumeCard>
     {/each}
     <div class="cards-title">STUDIES</div>
-    {#each resume.studies as resumeItem}
-      <ResumeCard {size} {resumeItem}></ResumeCard>
+    {#each resume.studies as resumeItem, index}
+      <ResumeCard {size} {resumeItem} isOdd={index % 2 === 0}></ResumeCard>
     {/each}
   </div>
 </div>
