@@ -19,7 +19,7 @@
   export let isOdd: boolean = false;
 </script>
 
-<div class={[`project-details-card--${size}`, `bevel--${size}`].join(' ')}>
+<div class={[`project-details-card--${size}`, `bevel--${size}${isOdd ? '-odd' : ''}`].join(' ')}>
   <InfoStripCard {isOdd} {size} title={data.name} subtitle="" centerTitle></InfoStripCard>
   <div class="project-details">
     <div class="project-metadata">

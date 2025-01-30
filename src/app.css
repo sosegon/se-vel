@@ -87,13 +87,20 @@ p {
 .bevel--large {
   clip-path: xywh(0 0 100% 100% round 4px var(--bevel-large));
 }
-
+.bevel--large-odd {
+  clip-path: xywh(0 0 100% 100% round var(--bevel-large) 4px);
+}
 .bevel--medium {
   clip-path: xywh(0 0 100% 100% round 4px var(--bevel-medium));
 }
-
+.bevel--medium-odd {
+  clip-path: xywh(0 0 100% 100% round var(--bevel-medium) 4px);
+}
 .bevel--small {
   clip-path: xywh(0 0 100% 100% round 4px var(--bevel-small));
+}
+.bevel--small-odd {
+  clip-path: xywh(0 0 100% 100% round var(--bevel-small) 4px);
 }
 
 #content-wrapper {

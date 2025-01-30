@@ -16,7 +16,9 @@
 <div
   on:click={onClick}
   on:keypress={() => {}}
-  class={['project-card', `project-card--${size}`, `bevel--${size}`].join(' ')}
+  class={['project-card', `project-card--${size}`, `bevel--${size}${isOdd ? '-odd' : ''}`].join(
+    ' ',
+  )}
 >
   <img src={imgUrl} alt={`${projectName}-${projectType}`} />
   <InfoStripCard title={projectName} subtitle={projectType} {isOdd} {size} />
