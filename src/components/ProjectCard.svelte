@@ -22,6 +22,7 @@
 >
   <img src={imgUrl} alt={`${projectName}-${projectType}`} />
   <InfoStripCard title={projectName} subtitle={projectType} {isOdd} {size} />
+  <div class="curtain"></div>
 </div>
 
 <style>

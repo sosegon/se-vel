@@ -1,11 +1,9 @@
 .project-card {
   position: relative;
   > div {
-    opacity: 0.8;
     position: absolute;
     bottom: 0;
     width: 100%;
-    transition: opacity ease 0.3s;
   }
   > img {
     object-position: 0 0;
@@ -15,9 +13,12 @@
   }
   &:hover {
     cursor: pointer;
-    > div {
-      opacity: 1;
-      transition: opacity ease 0.3s;
+    .curtain {
+      opacity: 0;
+      height: 0;
+      transition:
+        opacity 0.3s ease,
+        height 0.3s ease;
     }
   }
 }
@@ -32,4 +33,14 @@
 
 .project-card--small {
   height: 200px;
+}
+.curtain {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  transition:
+    opacity 0.3s ease,
+    height 0.3s ease;
 }
