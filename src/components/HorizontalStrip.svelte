@@ -17,7 +17,7 @@
 
 <style>
   div {
-    background-color: var(--color-neutral);
+    background-color: white;
   }
   .small {
     height: 60px;
