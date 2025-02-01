@@ -13,7 +13,7 @@ export default [
   {
     name: 'Apollo Podcast',
     type: 'Mobile',
-    imgUrl: '/images/projects/apollo.png',
+    imgUrl: '/images/projects/apollo.jpg',
     technologies: ['React Native'],
     links: {
       web: 'https://apollopods.com/',
