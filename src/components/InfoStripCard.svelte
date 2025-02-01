@@ -84,10 +84,16 @@
     font-weight: bold;
     flex: 1 1 auto;
     align-self: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
   }
 
   .strip-subtitle {
     font-weight: lighter;
     align-self: flex-end;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
   }
 </style>
