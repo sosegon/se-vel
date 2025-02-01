@@ -94,8 +94,9 @@
     }
   }
   .project-description {
-    font-family: 'IBM Plex Serif';
-    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    line-height: 28px;
   }
   .project-close {
     text-align: end;
@@ -121,7 +122,7 @@
     .project-metadata,
     .project-description,
     .project-close {
-      font-size: 12px;
+      font-size: 16px;
     }
   }
   .project-details-card--medium {
