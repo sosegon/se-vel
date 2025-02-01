@@ -47,7 +47,7 @@
   .large {
     height: 80px;
     .strip-title {
-      font-size: 32px;
+      font-size: 26px;
       padding: 0 0 0 32px;
     }
     .strip-subtitle {
@@ -59,7 +59,7 @@
   .medium {
     height: 80px;
     .strip-title {
-      font-size: 32px;
+      font-size: 26px;
       padding: 0 0 0 24px;
     }
     .strip-subtitle {
@@ -71,7 +71,7 @@
   .small {
     height: 60px;
     .strip-title {
-      font-size: 24px;
+      font-size: 18px;
       padding: 0 0 0 16px;
     }
     .strip-subtitle {
