@@ -33,7 +33,7 @@
 
 .project-card--small {
   height: 200px;
-  min-width: 320px;
+  width: 320px;
 }
 .curtain {
   width: 100%;
