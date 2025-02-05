@@ -56,6 +56,9 @@
         projectName={prj.title}
         projectType=""
         imgUrl={prj.imgUrl}
+        onClick={() => {
+          window.open(prj.url, '_blank');
+        }}
       ></ProjectCard>
     {/each}
   </div>
