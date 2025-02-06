@@ -38,7 +38,7 @@
     out:fade={{ duration: 200 }}
   >
     <div class="portrait">
-      <Portrait url="/images/main.jpg" {size}></Portrait>
+      <Portrait url="/images/portrait.jpg" {size}></Portrait>
     </div>
     <div class="about-area">
       <TextArea {size} text={about}></TextArea>
@@ -52,12 +52,14 @@
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    align-self: center;
+    width: 400px;
+    margin: auto;
   }
 
   @media (min-width: 768px) {
     #about-wrapper {
       gap: 24px;
+      width: 600px;
     }
   }
 
@@ -67,6 +69,7 @@
       grid-template-columns: repeat(3, 33.33%);
       grid-column: 2/-1;
       gap: 32px;
+      width: 700px;
     }
     .portrait {
       grid-column: 3;

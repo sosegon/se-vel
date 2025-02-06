@@ -67,9 +67,7 @@
     <div id="header" in:fly={{ delay: 200, duration: 300, y: -200 }}>
       <Header {size} {routes} {route}></Header>
     </div>
-    <div>
-      <slot></slot>
-    </div>
+    <slot></slot>
     {#if size === 'small'}
       <div id="footer">
         <HorizontalStrip style={footerStyle} size="small" position="bottom">

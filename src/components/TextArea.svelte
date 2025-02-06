@@ -18,11 +18,11 @@
   }
   .large {
     padding: 64px 32px;
-    font-size: 32px;
+    font-size: 24px;
   }
   .medium {
     padding: 48px 32px;
-    font-size: 32px;
+    font-size: 24px;
   }
   .small {
     padding: 24px 16px;
