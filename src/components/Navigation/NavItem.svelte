@@ -43,7 +43,6 @@
       }
     }
     & > div {
-      transform: skewX(12deg);
       text-transform: capitalize;
       transition: transform 0.3s ease;
     }
@@ -74,9 +73,6 @@
       color: var(--color-accent-2);
       cursor: default;
       transform: skewX(-12deg);
-      & > div {
-        transform: skewX(12deg);
-      }
     }
   }
 </style>
