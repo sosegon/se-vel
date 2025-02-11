@@ -50,8 +50,8 @@
 
   .small {
     font-size: 16px;
-    padding: 12px 2px;
-    width: 80px;
+    padding: 12px 10px;
+    width: fit-content;
     height: 36px;
     & > div {
       overflow: hidden;

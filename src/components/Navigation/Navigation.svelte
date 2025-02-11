@@ -23,7 +23,7 @@
     flex-direction: row;
   }
   .small {
-    gap: 6px;
+    gap: 4px;
   }
   .medium,
   .large {
