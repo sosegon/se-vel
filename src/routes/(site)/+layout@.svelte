@@ -39,8 +39,7 @@
       socialsStyle = {
         position: 'fixed',
         bottom: '24px',
-        margin: '0 auto',
-        left: 'calc(100vw/9)',
+        left: 'max(calc(16.67vw - 61.33px), calc(50vw - 561.33px))',
         right: '',
       };
     }

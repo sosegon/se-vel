@@ -126,11 +126,11 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
     max-width: 1500px;
+    overflow-x: hidden;
   }
 }
 
 .large-first-column {
-  color: red;
   font-family: 'League Gothic';
   color: var(--color-primary);
   display: flex;

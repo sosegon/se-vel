@@ -69,7 +69,7 @@
       grid-template-columns: repeat(3, 33.33%);
       grid-column: 2/-1;
       gap: 32px;
-      width: 700px;
+      width: 915px;
     }
     .portrait {
       grid-column: 3;
