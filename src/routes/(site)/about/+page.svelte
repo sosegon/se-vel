@@ -52,7 +52,7 @@
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    width: 400px;
+    max-width: calc(100vw - 64px);
     margin: auto;
   }
 
