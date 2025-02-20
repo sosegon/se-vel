@@ -76,17 +76,17 @@
     <div id="background" in:fade></div>
     {#if size !== 'small'}
       <div id="lines-container">
-        {#each linePositions as pos}
+        {#each linePositions as pos, index}
           <div
             class="horizontal-line"
             style="top: {pos.y + pos.h / 2}px; width: calc({pos.x}px - 32px);"
-            in:fly={{ duration: 300, x: -1000 }}
+            in:fly={{ delay: index * 100, duration: 300, x: -1000 }}
             out:fade={{ duration: 200 }}
           ></div>
           <div
             class="diagonal-line"
             style="top: {pos.y + pos.h / 2}px; left: calc({pos.x}px - 32px); height: 200vh"
-            in:fly={{ duration: 300, y: 1000 }}
+            in:fly={{ delay: index * 100, duration: 300 }}
             out:fade={{ duration: 200 }}
           ></div>
         {/each}
