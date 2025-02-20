@@ -13,8 +13,8 @@
   div {
     background-color: var(--color-neutral);
     color: var(--color-text);
-    font-family: 'IBM Plex Serif';
-    font-weight: bold;
+    font-family: 'MiSansLatin', sans-serif;
+    font-weight: 400;
   }
   .large {
     padding: 64px 32px;

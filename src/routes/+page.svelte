@@ -114,8 +114,8 @@
       text-transform: capitalize;
       color: var(--color-primary);
       font-size: 40px;
-      font-family: 'Roboto';
-      font-weight: 500;
+      font-family: 'MiSansLatin', sans-serif;
+      font-weight: 600;
       transition: transform ease 0.3s;
       &:hover {
         transform: translateX(5px);
@@ -131,7 +131,7 @@
   }
   #profile {
     font-family: 'IBM Plex Serif';
-    font-weight: lighter;
+    font-weight: 300;
     font-size: 40px;
     letter-spacing: 0px;
     display: flex;
@@ -168,7 +168,7 @@
       justify-content: center;
       li {
         font-size: 48px;
-        font-weight: normal;
+        font-weight: 500;
         margin-left: calc(var(--index) * 64px);
       }
     }

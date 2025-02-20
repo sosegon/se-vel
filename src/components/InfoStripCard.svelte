@@ -26,7 +26,7 @@
   .strip {
     display: flex;
     flex-direction: row;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'MiSansLatin', sans-serif;
   }
   .strip--center-title {
     text-align: center;
@@ -81,7 +81,7 @@
   }
 
   .strip-title {
-    font-weight: bold;
+    font-weight: 500;
     flex: 1 1 auto;
     align-self: center;
     overflow: hidden;
@@ -90,7 +90,7 @@
   }
 
   .strip-subtitle {
-    font-weight: lighter;
+    font-weight: 300;
     align-self: flex-end;
     overflow: hidden;
     text-wrap: nowrap;

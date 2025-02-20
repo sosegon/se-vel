@@ -48,8 +48,8 @@
   .resume-organization,
   .resume-location,
   .resume-dates {
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
+    font-family: 'MiSansLatin', sans-serif;
+    font-weight: 300;
     color: var(--color-primary);
     opacity: 0.7;
   }
@@ -57,7 +57,8 @@
     text-align: end;
   }
   .resume-description {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'MiSansLatin', sans-serif;
+    font-weight: 400;
     line-height: 28px;
     color: var(--color-text);
   }

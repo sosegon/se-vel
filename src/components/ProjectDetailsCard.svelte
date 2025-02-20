@@ -69,8 +69,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
+    font-family: 'MiSansLatin', sans-serif;
+    font-weight: 300;
     color: var(--color-primary);
   }
   .project-technologies,
@@ -94,14 +94,14 @@
     }
   }
   .project-description {
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
+    font-family: 'MiSansLatin', sans-serif;
+    font-weight: 400;
     line-height: 28px;
   }
   .project-close {
     text-align: end;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
+    font-family: 'MiSansLatin', sans-serif;
+    font-weight: 300;
     button {
       text-decoration: underline;
       color: var(--color-text);
