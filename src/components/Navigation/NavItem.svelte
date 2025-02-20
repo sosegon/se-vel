@@ -25,7 +25,7 @@
     height: fit-content;
     transform: skewX(-12deg);
     line-height: auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'MiSansLatin', sans-serif;
     font-weight: 400;
     clip-path: xywh(0 0 100% 100% round 15px 15px);
     transition:
@@ -50,8 +50,8 @@
 
   .small {
     font-size: 16px;
-    padding: 12px 2px;
-    width: 80px;
+    padding: 12px 10px;
+    width: fit-content;
     height: 36px;
     & > div {
       overflow: hidden;
@@ -62,6 +62,7 @@
   .large,
   .medium {
     font-size: 24px;
+    font-weight: 500;
   }
 
   .selected {

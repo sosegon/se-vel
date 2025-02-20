@@ -1,16 +1,7 @@
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-}
 .socials {
   display: flex;
   gap: 24px;
-  padding: 8px 32px;
+  padding: 8px 0px;
   border-radius: 8px;
   width: fit-content;
   background-color: white;
@@ -28,6 +19,25 @@
         opacity ease 0.3s,
         transform ease-out 0.3s;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .socials {
+    padding: 8px 32px;
+    opacity: 0.5;
+    transition: opacity ease 0.3s;
+    &:hover {
+      opacity: 1;
+      transition: opacity ease 0.3s;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .socials {
+    padding: 8px 32px;
+    opacity: 1;
   }
 }
 
