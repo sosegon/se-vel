@@ -86,7 +86,7 @@
           <div
             class="diagonal-line"
             style="top: {pos.y + pos.h / 2}px; left: calc({pos.x}px - 32px); height: 200vh"
-            in:fly={{ delay: index * 100, duration: 300 }}
+            in:fly={{ delay: index * 100, duration: 300, y: 1000 }}
             out:fade={{ duration: 200 }}
           ></div>
         {/each}
