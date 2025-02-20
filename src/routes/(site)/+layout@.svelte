@@ -55,9 +55,20 @@
     padding: '0 32px',
     height: '60px',
   };
+
+  function checkScroll() {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition >= pageHeight) {
+      socialsStyle = { ...socialsStyle, opacity: 1 };
+    } else {
+      delete socialsStyle.opacity;
+    }
+  }
 </script>
 
-<svelte:window bind:innerWidth={$windowWidth} />
+<svelte:window bind:innerWidth={$windowWidth} on:scroll={checkScroll} />
 
 {#if loading === true}
   <div></div>
