@@ -1,5 +1,17 @@
 export default [
   {
+    name: 'Lightning Generator',
+    type: 'Web',
+    imgUrl: '/images/projects/lightning-generator.png',
+    technologies: ['Html', 'Javascript', 'Svg'],
+    links: {
+      github: 'https://github.com/sosegon/lightning-generator',
+      web: 'http://se-vel.com/lightning-generator/',
+    },
+    description:
+      'Create a lightning bolt generator that renders random lightning bolt shapes procedurally. The purpose is to generate lightning bolts with simple Math operations and render them using SVG.',
+  },
+  {
     name: 'WGSN - CMS',
     type: 'Web',
     imgUrl: '/images/projects/stream-cms.jpg',
