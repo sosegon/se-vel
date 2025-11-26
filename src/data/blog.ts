@@ -1,4 +1,29 @@
 export default [
+    {
+    title: 'The Courier Incident: A Lesson on Control and Response',
+    imgUrl: '/images/blog/courier.jpg',
+    url: 'https://medium.com/@sosegon/the-courier-incident-a-lesson-on-control-and-response-7649132fa0ec',
+  },
+  {
+    title: '“Dry Chicken” is not what you think',
+    imgUrl: '/images/blog/chicken.jpg',
+    url: 'https://medium.com/@sosegon/dry-chicken-is-not-what-you-think-468da5dde63d',
+  },
+  {
+    title: 'My way to make changes',
+    imgUrl: '/images/blog/changes.jpg',
+    url: 'https://medium.com/@sosegon/my-way-to-make-changes-ebe061aad210',
+  },
+  {
+    title: 'Designing Donations That Matter (Part 2)',
+    imgUrl: '/images/blog/donations2.png',
+    url: 'https://medium.com/@sosegon/designing-donations-that-matter-part-2-3f387487285e',
+  },
+  {
+    title: 'Designing Donations That Matter',
+    imgUrl: '/images/blog/donations.jpg',
+    url: 'https://medium.com/@sosegon/designing-donations-that-matter-0bb0b0064a80',
+  },
   {
     title: 'Feedback during or after execution',
     imgUrl: '/images/blog/feedback.jpg',
