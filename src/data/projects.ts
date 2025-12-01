@@ -19,7 +19,8 @@ export default [
     links: {
       github: 'https://github.com/sosegon/se-vel',
       web: 'http://se-vel.com',
-      figma: 'https://www.figma.com/design/QQJromKoClmRmceVjXAhe5/Se-Vel-page?node-id=0-1&p=f'
+      figma: 'https://www.figma.com/design/QQJromKoClmRmceVjXAhe5/Se-Vel-page?node-id=0-1&p=f',
+      storybook: 'http://se-vel.com/storybook',
     },
     description:
       'Designed and developed a professional portfolio website to showcase projects and skills. Created the design from scratch using Figma, focusing on a clean and modern aesthetic. Implemented the website using Svelte and TypeScript to ensure a fast and responsive user experience.',

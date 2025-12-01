@@ -21,6 +21,7 @@ export type Project = {
     github?: string;
     web?: string;
     figma?: string;
+    storybook?: string;
   };
   description: string;
 };

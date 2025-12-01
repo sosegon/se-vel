@@ -5,6 +5,7 @@
   import GithubIcon from './icons/GithubIcon.svelte';
   import WebIcon from './icons/WebIcon.svelte';
   import FigmaIcon from './icons/FigmaIcon.svelte';
+  import StorybookIcon from './icons/StorybookIcon.svelte';
   import InfoStripCard from './InfoStripCard.svelte';
 
   export let size: Size = 'large';
@@ -14,7 +15,7 @@
     technologies: [''],
     imgUrl: '',
     description: '',
-    links: { github: '', web: '', figma: '' },
+    links: { github: '', web: '', figma: '', storybook: '' },
   };
   export let onClickClose: MouseEventHandler<HTMLButtonElement> = () => {};
   export let isOdd: boolean = false;
@@ -44,6 +45,11 @@
           {#if link === 'figma'}
             <a href={data?.links?.figma} target="_blank">
               <FigmaIcon size={size === 'small' ? 16 : 24}></FigmaIcon>
+            </a>
+          {/if}
+          {#if link === 'storybook'}
+            <a href={data?.links?.storybook} target="_blank">
+              <StorybookIcon size={size === 'small' ? 16 : 24}></StorybookIcon>
             </a>
           {/if}
         {/each}
