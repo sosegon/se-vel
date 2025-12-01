@@ -4,6 +4,8 @@
   import Divider from './Divider.svelte';
   import GithubIcon from './icons/GithubIcon.svelte';
   import WebIcon from './icons/WebIcon.svelte';
+  import FigmaIcon from './icons/FigmaIcon.svelte';
+  import StorybookIcon from './icons/StorybookIcon.svelte';
   import InfoStripCard from './InfoStripCard.svelte';
 
   export let size: Size = 'large';
@@ -13,7 +15,7 @@
     technologies: [''],
     imgUrl: '',
     description: '',
-    links: { github: '', web: '' },
+    links: { github: '', web: '', figma: '', storybook: '' },
   };
   export let onClickClose: MouseEventHandler<HTMLButtonElement> = () => {};
   export let isOdd: boolean = false;
@@ -38,6 +40,16 @@
           {#if link === 'web'}
             <a href={data?.links?.web} target="_blank">
               <WebIcon size={size === 'small' ? 16 : 24}></WebIcon>
+            </a>
+          {/if}
+          {#if link === 'figma'}
+            <a href={data?.links?.figma} target="_blank">
+              <FigmaIcon size={size === 'small' ? 16 : 24}></FigmaIcon>
+            </a>
+          {/if}
+          {#if link === 'storybook'}
+            <a href={data?.links?.storybook} target="_blank">
+              <StorybookIcon size={size === 'small' ? 16 : 24}></StorybookIcon>
             </a>
           {/if}
         {/each}
@@ -77,11 +89,18 @@
   .project-links {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 16px;
     text-transform: capitalize;
   }
   .project-technologies {
     opacity: 0.7;
+    text-transform: none;
+  }
+  @media (min-width: 768px) {
+    .project-technologies,
+    .project-links {
+      gap: 32px;
+    }
   }
   .project-links {
     a {

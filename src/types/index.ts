@@ -20,6 +20,8 @@ export type Project = {
   links?: {
     github?: string;
     web?: string;
+    figma?: string;
+    storybook?: string;
   };
   description: string;
 };
