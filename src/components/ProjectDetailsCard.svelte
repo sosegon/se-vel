@@ -88,6 +88,7 @@
   }
   .project-technologies {
     opacity: 0.7;
+    text-transform: none;
   }
   .project-links {
     a {

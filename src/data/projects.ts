@@ -3,7 +3,7 @@ export default [
     name: 'Lightning Generator',
     type: 'Web',
     imgUrl: '/images/projects/lightning-generator.png',
-    technologies: ['Html', 'Javascript', 'Svg'],
+    technologies: ['HTML', 'JavaScript', 'SVG'],
     links: {
       github: 'https://github.com/sosegon/lightning-generator',
       web: 'http://se-vel.com/lightning-generator/',
@@ -15,20 +15,20 @@ export default [
     name: 'Professional Website',
     type: 'Web',
     imgUrl: '/images/projects/se-vel-design.png',
-    technologies: ['Figma', 'Svelte', 'Typescript'],
+    technologies: ['Figma', 'Svelte', 'TypeScript'],
     links: {
       github: 'https://github.com/sosegon/se-vel',
       web: 'http://se-vel.com',
       figma: 'https://www.figma.com/design/QQJromKoClmRmceVjXAhe5/Se-Vel-page?node-id=0-1&p=f'
     },
     description:
-      'Designed and developed a professional portfolio website to showcase projects and skills. Created the design from scratch using Figma, focusing on a clean and modern aesthetic. Implemented the website using Svelte and Typescript to ensure a fast and responsive user experience.',
+      'Designed and developed a professional portfolio website to showcase projects and skills. Created the design from scratch using Figma, focusing on a clean and modern aesthetic. Implemented the website using Svelte and TypeScript to ensure a fast and responsive user experience.',
   },
   {
     name: 'WGSN - CMS',
     type: 'Web',
     imgUrl: '/images/projects/stream-cms.jpg',
-    technologies: ['React', 'Typescript'],
+    technologies: ['React', 'TypeScript'],
     links: {
       web: 'https://www.wgsn.com/stream-cms',
     },
@@ -58,7 +58,7 @@ export default [
     name: 'Vision',
     type: 'Web',
     imgUrl: '/images/projects/landing3d.jpg',
-    technologies: ['Reactjs', 'Threejs'],
+    technologies: ['React.js', 'Three.js'],
     links: {
       web: 'https://sosegon.github.io/landing3d/',
     },
@@ -81,7 +81,7 @@ export default [
     name: 'Farmpolitik',
     type: 'Web',
     imgUrl: '/images/projects/farmpolitik.jpg',
-    technologies: ['Reactjs', 'Threejs', 'Firebase'],
+    technologies: ['React.js', 'Three.js', 'Firebase'],
     links: {
       github: 'https://github.com/sosegon/farmpolitik',
       web: 'https://farmpolitik.com',
@@ -93,7 +93,7 @@ export default [
     name: 'AnalyzeCeph',
     type: 'Web',
     imgUrl: '/images/projects/analyzeceph.jpg',
-    technologies: ['Reactjs'],
+    technologies: ['React.js'],
     links: {
       web: 'https://www.analyzeceph.com/',
     },
@@ -104,7 +104,7 @@ export default [
     name: 'Numbers',
     type: 'Web',
     imgUrl: '/images/projects/numbers.png',
-    technologies: ['Reactjs'],
+    technologies: ['React.js'],
     links: {
       github: 'https://github.com/sosegon/numbers',
       web: 'https://sosegon.github.io/numbers-demo/',
@@ -127,7 +127,7 @@ export default [
     name: 'AnkiGame',
     type: 'Mobile',
     imgUrl: '/images/projects/anki.jpg', // Update this
-    technologies: ['Android', 'Reactjs', 'Firebase'],
+    technologies: ['Android', 'React.js', 'Firebase'],
     links: {
       github: 'https://github.com/sosegon/AnkiGame',
     },
@@ -138,7 +138,7 @@ export default [
     name: 'Skin filter',
     type: 'Web',
     imgUrl: '/images/projects/skin-filter.jpg', // Update this
-    technologies: ['Chrome', 'Javascript'],
+    technologies: ['Chrome', 'JavaScript'],
     links: {
       github: 'https://github.com/sosegon/OS-Image-Filter',
       web: 'https://chrome.google.com/webstore/detail/skin-filter/digkbjcglmbbipijiogdeegbfbepgdon/related?hl=en-GB',
@@ -150,7 +150,7 @@ export default [
     name: 'Remove BG',
     type: 'Web',
     imgUrl: '/images/projects/remove-bg.jpg', // Update this
-    technologies: ['Chrome', 'Javascript'],
+    technologies: ['Chrome', 'JavaScript'],
     links: {
       github:
         'https://github.com/sosegon/udacity-projects/tree/master/machine-learning-remove-background',
@@ -184,7 +184,7 @@ export default [
     name: '3D Campus',
     type: 'Web',
     imgUrl: '/images/projects/campus.jpg', // Update this
-    technologies: ['Sketchup', 'Javascript'],
+    technologies: ['SketchUp', 'JavaScript'],
     links: {
       web: 'http://www2.ucsg.edu.ec/campus_virtual/index_campus.php',
     },
