@@ -9,7 +9,20 @@ export default [
       web: 'http://se-vel.com/lightning-generator/',
     },
     description:
-      'Create a lightning bolt generator that renders random lightning bolt shapes procedurally. The purpose is to generate lightning bolts with simple Math operations and render them using SVG.',
+      'Created a web application that renders random lightning bolt shapes procedurally. The purpose is to generate lightning bolts with simple Math operations and render them using SVG.',
+  },
+  {
+    name: 'Professional Website',
+    type: 'Web',
+    imgUrl: '/images/projects/se-vel-design.png',
+    technologies: ['Figma', 'Svelte', 'Typescript'],
+    links: {
+      github: 'https://github.com/sosegon/se-vel',
+      web: 'http://se-vel.com',
+      figma: 'https://www.figma.com/design/QQJromKoClmRmceVjXAhe5/Se-Vel-page?node-id=0-1&p=f'
+    },
+    description:
+      'Designed and developed a professional portfolio website to showcase projects and skills. Created the design from scratch using Figma, focusing on a clean and modern aesthetic. Implemented the website using Svelte and Typescript to ensure a fast and responsive user experience.',
   },
   {
     name: 'WGSN - CMS',

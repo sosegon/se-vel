@@ -4,6 +4,7 @@
   import Divider from './Divider.svelte';
   import GithubIcon from './icons/GithubIcon.svelte';
   import WebIcon from './icons/WebIcon.svelte';
+  import FigmaIcon from './icons/FigmaIcon.svelte';
   import InfoStripCard from './InfoStripCard.svelte';
 
   export let size: Size = 'large';
@@ -13,7 +14,7 @@
     technologies: [''],
     imgUrl: '',
     description: '',
-    links: { github: '', web: '' },
+    links: { github: '', web: '', figma: '' },
   };
   export let onClickClose: MouseEventHandler<HTMLButtonElement> = () => {};
   export let isOdd: boolean = false;
@@ -38,6 +39,11 @@
           {#if link === 'web'}
             <a href={data?.links?.web} target="_blank">
               <WebIcon size={size === 'small' ? 16 : 24}></WebIcon>
+            </a>
+          {/if}
+          {#if link === 'figma'}
+            <a href={data?.links?.figma} target="_blank">
+              <FigmaIcon size={size === 'small' ? 16 : 24}></FigmaIcon>
             </a>
           {/if}
         {/each}
