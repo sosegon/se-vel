@@ -89,12 +89,18 @@
   .project-links {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 16px;
     text-transform: capitalize;
   }
   .project-technologies {
     opacity: 0.7;
     text-transform: none;
+  }
+  @media (min-width: 768px) {
+    .project-technologies,
+    .project-links {
+      gap: 32px;
+    }
   }
   .project-links {
     a {
