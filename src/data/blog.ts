@@ -1,5 +1,10 @@
 export default [
-    {
+  {
+    title: 'AI is a tool, not a menace to your role',
+    imgUrl: '/images/blog/ai-tool.png',
+    url: 'https://medium.com/@sosegon/ai-is-a-tool-not-a-menace-to-your-role-d2287910ea12',
+  },
+  {
     title: 'The Courier Incident: A Lesson on Control and Response',
     imgUrl: '/images/blog/courier.jpg',
     url: 'https://medium.com/@sosegon/the-courier-incident-a-lesson-on-control-and-response-7649132fa0ec',

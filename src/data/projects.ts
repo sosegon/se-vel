@@ -26,6 +26,17 @@ export default [
       'Designed and developed a professional portfolio website to showcase projects and skills. Created the design from scratch using Figma, focusing on a clean and modern aesthetic. Implemented the website using Svelte and TypeScript to ensure a fast and responsive user experience.',
   },
   {
+    name: 'Donation flow redesign',
+    type: 'Web',
+    imgUrl: '/images/projects/donacion-design.png',
+    technologies: ['Figma'],
+    links: {
+      figma: 'https://www.figma.com/proto/ZLVQ2vmltszvDdv9NxO13e/DONACION-BAQ',
+    },
+    description:
+      'Redesigned the donation flow for a non-profit organization to improve user experience and increase conversion rates. Conducted user research and usability testing to identify pain points and areas for improvement. Created wireframes and high-fidelity prototypes using Figma, focusing on a streamlined and intuitive donation process.',
+  },
+  {
     name: 'WGSN - CMS',
     type: 'Web',
     imgUrl: '/images/projects/stream-cms.jpg',
