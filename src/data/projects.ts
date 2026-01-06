@@ -1,5 +1,17 @@
 export default [
   {
+    name: 'Numbers',
+    type: 'Web',
+    imgUrl: '/images/projects/numbers.png',
+    technologies: ['React.js'],
+    links: {
+      github: 'https://github.com/sosegon/numbers',
+      web: 'https://se-vel.com/numbers/',
+    },
+    description:
+      'Designed and developed a casual single-player game featuring AI-driven opponents, built from the ground up using React.js and Redux. This personal project focused on delivering a smooth and engaging gameplay experience while incorporating structured documentation to ensure maintainability and future enhancements. The game balances simplicity and strategy, offering an accessible yet compelling challenge for players.',
+  },
+  {
     name: 'Lightning Generator',
     type: 'Web',
     imgUrl: '/images/projects/lightning-generator.png',
@@ -111,18 +123,6 @@ export default [
     },
     description:
       'Developed a web application for cephalometric analysis using React.js, enhancing functionality and usability. Improved an existing codebase by implementing new features and creating comprehensive documentation from scratch. The project focused on increasing accuracy, maintainability, and user experience, streamlining cephalometric assessments for professionals in the field.',
-  },
-  {
-    name: 'Numbers',
-    type: 'Web',
-    imgUrl: '/images/projects/numbers.png',
-    technologies: ['React.js'],
-    links: {
-      github: 'https://github.com/sosegon/numbers',
-      web: 'https://sosegon.github.io/numbers-demo/',
-    },
-    description:
-      'Designed and developed a casual single-player game featuring AI-driven opponents, built from the ground up using React.js and Redux. This personal project focused on delivering a smooth and engaging gameplay experience while incorporating structured documentation to ensure maintainability and future enhancements. The game balances simplicity and strategy, offering an accessible yet compelling challenge for players.',
   },
   {
     name: 'Plates counting',
